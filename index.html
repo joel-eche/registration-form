@@ -5,10 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration form</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <main>
+  <header class="registration-header">
+    <h1 class="title">Ready to get started?</h1>
+    <h2 class="subtitle">Prepare to join one of the top lawyer communities</h2>
+  </header>
+  <main class="registration-form">
     <form action="" method="post">
       <fieldset class="user-info">
         <div>
@@ -56,33 +62,42 @@
           <input type="number" name="years_of_experience" id="years_of_experience" min="0" max="60" required>
         </div>
         <div>
-          <label for="languages">Languages</label>
-          <select name="languages" id="languages" multiple>
-            <option value="es">Spanish - es</option>
-            <option value="en">English - en</option>
-            <option value="do">Dothraki - do</option>
-            <option value="ky">Kryptonese - ky</option>
-            <option value="kl">Klingon - kl</option>
-            <option value="vu">Vulcan - vu</option>
-            <option value="ali">Alienese - ali</option>
-            <option value="others">Elvish - el</option>
-          </select>
-        </div>
-        <div>
           <label for="phone_number">Cell Phone Number</label>
           <input type="tel" name="phone_number" id="phone_number" pattern="[0-9]{9}" placeholder="#########">
         </div>
         <div>
           <label for="ethnicity">Ethnicity</label>
-          <input type="radio" name="ethnicity" value="Earthling" required>Earthling
-          <input type="radio" name="ethnicity" value="Martian">Martian
-          <input type="radio" name="ethnicity" value="Asgardian">Asgardian
+          <div>
+            <label>
+              <input type="radio" name="ethnicity" value="Earthling" required>Earthling
+            </label>
+            <label>
+              <input type="radio" name="ethnicity" value="Martian">Martian
+            </label>
+            <label>
+              <input type="radio" name="ethnicity" value="Asgardian">Asgardian
+            </label>
+          </div>
+        </div>
+        <div class="languages">
+          <label for="languages">Languages</label>
+          <select name="languages" id="languages" multiple>
+            <option value="es">Spanish</option>
+            <option value="en">English</option>
+            <option value="do">Dothraki</option>
+            <option value="ky">Kryptonese</option>
+            <option value="kl">Klingon</option>
+            <option value="vu">Vulcan</option>
+            <option value="ali">Alienese</option>
+            <option value="others">Elvish</option>
+          </select>
         </div>
       </fieldset>
-      <fielset class="user-action">
+      <fieldset class="user-action">
         <div>
           <label>
-            <input type="checkbox" name="terms_of_use" id="terms_of_use" value="terms_of_use" required> I swear that I totally read the terms of use
+            <input type="checkbox" name="terms_of_use" id="terms_of_use" value="terms_of_use" required> I swear that I
+            totally read the terms of use
           </label>
         </div>
         <input type="submit" name="submit" value="CREATE YOUR ACCOUNT">
